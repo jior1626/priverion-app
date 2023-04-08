@@ -1,0 +1,24 @@
+.item-navbar {
+    margin-right: 1rem !important;
+    letter-spacing: 2px !important;
+    padding: 1rem !important;
+}
+
+
+.item-navbar:hover {
+    background: lavender !important;
+    border-radius: 1rem !important;
+    font-weight: bold !important;
+    /* color: white; */
+}
+
+.item-navbar a {
+    color: black;
+    text-decoration: none !important;
+}
+
+.item-navbar a:hover {
+    color: black;
+    /* font-weight: bold !important; */
+}
+
