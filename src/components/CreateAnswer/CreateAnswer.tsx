@@ -92,7 +92,7 @@ const CreateAnswer:  React.FC<CreateAnswerInterface> = ({typeQuestion}) => {
                         </Row>)
                     })}
                     
-                    <Row>
+                    <Row className="content-btn-add">
                         <Col lg={12}>
                             <Button onClick={() => addAnswer()} variant="outline-success">
                                 <i className="bi bi-plus-lg"></i>
