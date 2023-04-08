@@ -1,0 +1,11 @@
+.card-form {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 5rem !important;
+}
+
+.card-form:hover {
+    cursor: pointer;
+    box-shadow: 0px 6px 31px 2px skyblue !important;
+}
