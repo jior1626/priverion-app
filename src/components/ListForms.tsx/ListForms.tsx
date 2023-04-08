@@ -1,4 +1,4 @@
-import { Row, Col, Container, Button, Card } from "react-bootstrap";
+import { Row, Col, Container, Button, Card, Dropdown} from "react-bootstrap";
 
 import "./ListForms.css";
 
@@ -6,9 +6,9 @@ const ListFormsComponent = ({}) => {
     return (
         <>
             <Container className="p-5">
-                <Row>
+                <Row className="mb-5">
                     <Col lg={3}>
-                        <Card  className="card-form" style={{ width: '18rem', height: '13.5rem' }}>
+                        <Card  className="card-form new-form">
                         {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                             <Card.Body className="text-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" className="bi bi-plus-circle-dotted" viewBox="0 0 16 16">
@@ -18,41 +18,162 @@ const ListFormsComponent = ({}) => {
                         </Card>
                     </Col>
                     <Col lg={3}>
-                            <Card style={{ width: '18rem' }}>
-                        {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+                            <Card className="card-form list-form">
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>Titulo del formulario</Card.Title>
                                 <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Card.Footer className="">
+                                    <p>Creado: </p>
+                                    <Dropdown>
+                                        <Dropdown.Toggle variant="default" id="dropdown-basic">
+                                            <i className="bi bi-three-dots-vertical"></i>
+                                        </Dropdown.Toggle>
+
+                                        <Dropdown.Menu>
+                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                </Card.Footer>
+                               
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col lg={3}>
-                            <Card style={{ width: '18rem' }}>
-                        {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+                            <Card className="card-form list-form">
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>Titulo del formulario</Card.Title>
                                 <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Card.Footer className="">
+                                    <p>Creado: </p>
+                                    <Dropdown>
+                                        <Dropdown.Toggle variant="default" id="dropdown-basic">
+                                            <i className="bi bi-three-dots-vertical"></i>
+                                        </Dropdown.Toggle>
+
+                                        <Dropdown.Menu>
+                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                </Card.Footer>
+                               
                             </Card.Body>
                         </Card>
                     </Col>
                     <Col lg={3}>
-                            <Card style={{ width: '18rem' }}>
-                        {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
+                            <Card className="card-form list-form">
                             <Card.Body>
-                                <Card.Title>Card Title</Card.Title>
+                                <Card.Title>Titulo del formulario</Card.Title>
                                 <Card.Text>
-                                Some quick example text to build on the card title and make up the
-                                bulk of the card's content.
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
                                 </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
+                                <Card.Footer className="">
+                                    <p>Creado: </p>
+                                    <Dropdown>
+                                        <Dropdown.Toggle variant="default" id="dropdown-basic">
+                                            <i className="bi bi-three-dots-vertical"></i>
+                                        </Dropdown.Toggle>
+
+                                        <Dropdown.Menu>
+                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                </Card.Footer>
+                               
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                </Row>
+                <h4>Recents</h4>
+                <hr />
+                <Row className="mt-5">
+                    <Col lg={3}>
+                        <Card className="card-form list-form">
+                            <Card.Body>
+                                <Card.Title>Titulo del formulario</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                                <Card.Footer className="">
+                                    <p>Creado: </p>
+                                    <Dropdown>
+                                        <Dropdown.Toggle variant="default" id="dropdown-basic">
+                                            <i className="bi bi-three-dots-vertical"></i>
+                                        </Dropdown.Toggle>
+
+                                        <Dropdown.Menu>
+                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                </Card.Footer>
+                               
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col lg={3}>
+                            <Card className="card-form list-form">
+                            <Card.Body>
+                                <Card.Title>Titulo del formulario</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                                <Card.Footer className="">
+                                    <p>Creado: </p>
+                                    <Dropdown>
+                                        <Dropdown.Toggle variant="default" id="dropdown-basic">
+                                            <i className="bi bi-three-dots-vertical"></i>
+                                        </Dropdown.Toggle>
+
+                                        <Dropdown.Menu>
+                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                </Card.Footer>
+                               
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                    <Col lg={3}>
+                            <Card className="card-form list-form">
+                            <Card.Body>
+                                <Card.Title>Titulo del formulario</Card.Title>
+                                <Card.Text>
+                                    Some quick example text to build on the card title and make up the
+                                    bulk of the card's content.
+                                </Card.Text>
+                                <Card.Footer className="">
+                                    <p>Creado: </p>
+                                    <Dropdown>
+                                        <Dropdown.Toggle variant="default" id="dropdown-basic">
+                                            <i className="bi bi-three-dots-vertical"></i>
+                                        </Dropdown.Toggle>
+
+                                        <Dropdown.Menu>
+                                            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+                                        </Dropdown.Menu>
+                                    </Dropdown>
+                                </Card.Footer>
+                               
                             </Card.Body>
                         </Card>
                     </Col>

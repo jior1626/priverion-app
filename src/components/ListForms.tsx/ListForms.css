@@ -1,11 +1,31 @@
 .card-form {
+    width: 18rem !important;
+    height: 13.5rem !important;
+}
+
+.new-form {
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     padding: 5rem !important;
 }
 
-.card-form:hover {
+.new-form:hover {
     cursor: pointer;
     box-shadow: 0px 6px 31px 2px skyblue !important;
+}
+
+.list-form:hover {
+    cursor: pointer;
+    box-shadow: 0px 6px 31px 2px skyblue !important;
+}
+
+.card-footer {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    padding: 0 !important;
+    color: black;
+    background-color: white !important;
+    border-top: none !important;
 }
