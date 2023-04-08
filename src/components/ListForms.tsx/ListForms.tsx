@@ -1,14 +1,22 @@
 import { Row, Col, Container, Button, Card, Dropdown} from "react-bootstrap";
+import { useNavigate, useParams } from "react-router";
 
 import "./ListForms.css";
 
 const ListFormsComponent = ({}) => {
+
+    const navigate = useNavigate();
+
+    const createForm = () => {
+        navigate("/create-form");
+    }
+
     return (
         <>
             <Container className="p-5">
                 <Row className="mb-5">
                     <Col lg={3}>
-                        <Card  className="card-form new-form">
+                        <Card className="card-form new-form" onClick={() => navigate("/create-form")}>
                         {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                             <Card.Body className="text-center">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" fill="currentColor" className="bi bi-plus-circle-dotted" viewBox="0 0 16 16">

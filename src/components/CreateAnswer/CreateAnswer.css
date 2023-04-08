@@ -1,0 +1,12 @@
+.content-checks {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-top: 7px !important;
+}
+
+.content-checks > input {
+    border: 1px solid black !important;
+    width: 2rem !important;
+    height: 2rem !important;
+}
