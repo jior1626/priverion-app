@@ -73,7 +73,7 @@ const CreateQuestion:  React.FC<CreateQuestionInterface> = ({deleteQuestion, ind
                     <Card.Footer as='div' className="content-footer">
                             <Row>
                                 <Col>
-                                    <Button className="text-end" variant="outline-dark" onClick={() => deleteQuestion(index)}>
+                                    <Button className="text-end" variant="light" onClick={() => deleteQuestion(index)}>
                                         <i className="bi bi-trash-fill"></i>
                                     </Button>
                                 </Col>

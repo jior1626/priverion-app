@@ -58,8 +58,10 @@ const CreateFormComponent = ({}) => {
                                     </FloatingLabel>
                                 </Card.Text>
                             </Card.Body>
-                            <Card.Footer className="card-footer">
-                                <Button className="text-end" variant="outline-dark" onClick={() => addNewQuestion()}>New Question</Button>
+                            <Card.Footer className="card-footer-create">
+                                <Button className="text-end" variant="light" onClick={() => addNewQuestion()}>
+                                    <i className="bi bi-plus-circle-fill"></i>
+                                </Button>
                             </Card.Footer>
                         </Card>
                     </Col>

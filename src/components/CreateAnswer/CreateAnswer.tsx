@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { Container, Row, Col, Card, Button, FloatingLabel, Form } from "react-bootstrap";
 import { TYPEQUESTIONS } from "../../utils/constants";
@@ -18,6 +18,16 @@ const CreateAnswer:  React.FC<CreateAnswerInterface> = ({typeQuestion}) => {
 
     const [typeAnswer, setTypeAnswer] = useState();
 
+    const changeTypeQuestion = () => {
+        setAnswersText([]);
+        setAnswersSingleChoise([]);
+        setAnswersMultipleChoise([]);
+    }
+
+    useEffect(() => {
+        changeTypeQuestion();
+    }, [typeQuestion])
+
     const addAnswer = () => {
         let newAnswer: Answer = {};
         newAnswer.description = "";
@@ -34,6 +44,21 @@ const CreateAnswer:  React.FC<CreateAnswerInterface> = ({typeQuestion}) => {
         }
     }
 
+    const deleteAnswer = (indexFill: number, type: string) => {
+        if(typeQuestion == TYPEQUESTIONS.TEXT) {
+            let filterQuestion = answersText.filter((item, index) => index !== indexFill);
+            setAnswersText(filterQuestion);
+        }
+        if(typeQuestion == TYPEQUESTIONS.SINGLE_CHOISE) {
+            let filterQuestion = answersSingleChoise.filter((item, index) => index !== indexFill);
+            setAnswersSingleChoise(filterQuestion);
+        }
+        if(typeQuestion == TYPEQUESTIONS.MULTIPLE_CHOISE) {
+            let filterQuestion = answersMultipleChoise.filter((item, index) => index !== indexFill);
+            setAnswersMultipleChoise(filterQuestion);
+        }
+    }
+
     const renderTypeQuestions = () => {
 
         if(typeQuestion == TYPEQUESTIONS.TEXT) {
@@ -42,7 +67,7 @@ const CreateAnswer:  React.FC<CreateAnswerInterface> = ({typeQuestion}) => {
 
                     {answersText.map((answerText: any, key: any) => {
                         return (<Row key={"text"+key}>
-                            <Col lg={12}>
+                            <Col lg={11}>
                                 <FloatingLabel
                                     controlId="description"
                                     label="Answer"
@@ -50,6 +75,9 @@ const CreateAnswer:  React.FC<CreateAnswerInterface> = ({typeQuestion}) => {
                                 >
                                     <Form.Control type="text" placeholder="Digite la opción de respuesta" />
                                 </FloatingLabel>
+                            </Col>
+                            <Col lg={1} className="btn-delete-answer">
+                                <Button variant="outline-danger" onClick={() => deleteAnswer(key, TYPEQUESTIONS.TEXT)}><i className="bi bi-x"></i></Button>
                             </Col>
                         </Row>)
                     })}
@@ -70,7 +98,7 @@ const CreateAnswer:  React.FC<CreateAnswerInterface> = ({typeQuestion}) => {
                 <Container>
 
                     {answersSingleChoise.map((answerSingleChoise: any, key: any) => {
-                        return (<Row key={"single-choise-"+key} lg={6}>
+                        return (<Row key={"single-choise-"+key} lg={7}>
                             <Col lg={1}>
                                 <Form.Check 
                                     className="content-checks"
@@ -88,6 +116,9 @@ const CreateAnswer:  React.FC<CreateAnswerInterface> = ({typeQuestion}) => {
                                 >
                                     <Form.Control type="text" placeholder="Digite la opción de respuesta" />
                                 </FloatingLabel>
+                            </Col>
+                            <Col lg={1} className="btn-delete-answer">
+                                <Button variant="outline-danger" onClick={() => deleteAnswer(key, TYPEQUESTIONS.SINGLE_CHOISE)}><i className="bi bi-x"></i></Button>
                             </Col>
                         </Row>)
                     })}
@@ -108,7 +139,7 @@ const CreateAnswer:  React.FC<CreateAnswerInterface> = ({typeQuestion}) => {
                 <Container>
 
                     {answersMultipleChoise.map((answerMultipleChoise: any, key: any) => {
-                        return (<Row key={"multiple-choise-"+key} lg={6}>
+                        return (<Row key={"multiple-choise-"+key} lg={7}>
                             <Col lg={1}>
                                 <Form.Check 
                                     className="content-checks"
@@ -125,6 +156,9 @@ const CreateAnswer:  React.FC<CreateAnswerInterface> = ({typeQuestion}) => {
                                 >
                                     <Form.Control type="text" placeholder="Digite la opción de respuesta" />
                                 </FloatingLabel>
+                            </Col>
+                            <Col lg={1} className="btn-delete-answer">
+                                <Button variant="outline-danger" onClick={() => deleteAnswer(key, TYPEQUESTIONS.MULTIPLE_CHOISE)}><i className="bi bi-x"></i></Button>
                             </Col>
                         </Row>)
                     })}

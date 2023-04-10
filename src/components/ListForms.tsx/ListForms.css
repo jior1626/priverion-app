@@ -20,7 +20,7 @@
     box-shadow: 0px 6px 31px 2px skyblue !important;
 }
 
-.card-footer {
+.card-footer-list {
     display: flex !important;
     flex-direction: row !important;
     justify-content: space-between !important;

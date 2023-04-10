@@ -1,5 +1,9 @@
 .content-footer {
     display: flex !important;
     flex-direction: row !important;
-    justify-content: end !important;
+    justify-content: flex-end !important;
+    color: black;
+    background-color: white !important;
+    border-top: none !important;
+    padding: 2rem !important;
 }
