@@ -33,8 +33,10 @@ const ListFormsComponent = ({}) => {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the card's content.
                                 </Card.Text>
-                                <Card.Footer className="">
-                                    <p>Creado: </p>
+                                <Card.Footer>
+                                    <div>
+                                        <h6>Creado: </h6>
+                                    </div>
                                     <Dropdown>
                                         <Dropdown.Toggle variant="default" id="dropdown-basic">
                                             <i className="bi bi-three-dots-vertical"></i>
@@ -59,8 +61,10 @@ const ListFormsComponent = ({}) => {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the card's content.
                                 </Card.Text>
-                                <Card.Footer className="">
-                                    <p>Creado: </p>
+                                <Card.Footer>
+                                    <div>
+                                        <h6>Creado: </h6>
+                                    </div>
                                     <Dropdown>
                                         <Dropdown.Toggle variant="default" id="dropdown-basic">
                                             <i className="bi bi-three-dots-vertical"></i>
@@ -85,8 +89,10 @@ const ListFormsComponent = ({}) => {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the card's content.
                                 </Card.Text>
-                                <Card.Footer className="">
-                                    <p>Creado: </p>
+                                <Card.Footer>
+                                    <div>
+                                        <h6>Creado: </h6>
+                                    </div>
                                     <Dropdown>
                                         <Dropdown.Toggle variant="default" id="dropdown-basic">
                                             <i className="bi bi-three-dots-vertical"></i>
@@ -105,18 +111,20 @@ const ListFormsComponent = ({}) => {
                     </Col>
                 </Row>
                 <h4>Recents</h4>
-                <hr />
+                {/* <hr /> */}
                 <Row className="mt-5">
                     <Col lg={3}>
                         <Card className="card-form list-form">
                             <Card.Body>
                                 <Card.Title>Titulo del formulario</Card.Title>
-                                <Card.Text>
+                                <Card.Text as='div'>
                                     Some quick example text to build on the card title and make up the
                                     bulk of the card's content.
                                 </Card.Text>
-                                <Card.Footer className="">
-                                    <p>Creado: </p>
+                                <Card.Footer>
+                                    <div>
+                                        <h6>Creado: </h6>
+                                    </div>
                                     <Dropdown>
                                         <Dropdown.Toggle variant="default" id="dropdown-basic">
                                             <i className="bi bi-three-dots-vertical"></i>
@@ -141,8 +149,11 @@ const ListFormsComponent = ({}) => {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the card's content.
                                 </Card.Text>
-                                <Card.Footer className="">
-                                    <p>Creado: </p>
+                                <Card.Footer>
+                                    <div>
+                                        <h6>Creado: </h6>
+                                    </div>
+                                
                                     <Dropdown>
                                         <Dropdown.Toggle variant="default" id="dropdown-basic">
                                             <i className="bi bi-three-dots-vertical"></i>
@@ -167,8 +178,10 @@ const ListFormsComponent = ({}) => {
                                     Some quick example text to build on the card title and make up the
                                     bulk of the card's content.
                                 </Card.Text>
-                                <Card.Footer className="">
-                                    <p>Creado: </p>
+                                <Card.Footer>
+                                    <div>
+                                        <h6>Creado: </h6>
+                                    </div>
                                     <Dropdown>
                                         <Dropdown.Toggle variant="default" id="dropdown-basic">
                                             <i className="bi bi-three-dots-vertical"></i>

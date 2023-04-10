@@ -24,13 +24,20 @@ const CreateFormComponent = ({}) => {
         setQuestions((questions) => [...questions, newQuestion]);
     }
 
+    const deleteQuestion = (indexItem: any) => {
+        let newQuestions = questions.filter((item: any, index: any) => index !== indexItem);
+        setQuestions(newQuestions);
+    }
+
     return (
         <>
             <Container className="p-5">
                 <Row className="mb-5">
                     <Col lg={12}>
                         <Card>
-                            <Card.Header style={{background: backgroundHeader, color: colorHeader}}></Card.Header>
+                            <Card.Header style={{background: backgroundHeader, color: colorHeader}}>
+                                <h5></h5>
+                            </Card.Header>
                             <Card.Body className="p-5">
                                 <Card.Title>
                                     <FloatingLabel
@@ -41,7 +48,7 @@ const CreateFormComponent = ({}) => {
                                         <Form.Control type="text" placeholder="Título del formulario" />
                                     </FloatingLabel>
                                 </Card.Title>
-                                <Card.Text>
+                                <Card.Text as='div'>
                                     <FloatingLabel
                                         controlId="description"
                                         label="Descripción del formulario"
@@ -49,10 +56,11 @@ const CreateFormComponent = ({}) => {
                                     >
                                         <Form.Control type="text" placeholder="Descripción del formulario" />
                                     </FloatingLabel>
-
-                                    <Button className="text-end" variant="outline-dark" onClick={() => addNewQuestion()}>New Question</Button>
                                 </Card.Text>
                             </Card.Body>
+                            <Card.Footer className="card-footer">
+                                <Button className="text-end" variant="outline-dark" onClick={() => addNewQuestion()}>New Question</Button>
+                            </Card.Footer>
                         </Card>
                     </Col>
                 </Row>
@@ -60,12 +68,7 @@ const CreateFormComponent = ({}) => {
                 {
                     questions.map((question: Question, key: any) => {
                         return (
-                            <Row key={key} className="mb-5 mt-5">
-                                <Col lg={12}>
-                                    <CreateQuestion key={key} />
-                                </Col>
-                                <hr />
-                            </Row>
+                            <CreateQuestion index={key} key={key} deleteQuestion={deleteQuestion} />
                         )
                     })
                 }
